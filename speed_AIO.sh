@@ -1,9 +1,9 @@
 #!/bin/bash
 # $ ./speed.sh hk 443 4 xxxx.com xxxx@gmail.com xxxxxxxxxxxxxxx https://vipcs.cloudflarest.link
 export LANG=zh_CN.UTF-8
-auth_email="xxxx@gmail.com"    #你的CloudFlare注册账户邮箱 *必填
-auth_key="xxxxxxxxxxxxxxx"   #你的CloudFlare账户key,位置在域名概述页面点击右下角获取api key。*必填
-zone_name="xxxx.com"     #你的主域名 *必填
+auth_email="gavin8857@gmail.com"    #你的CloudFlare注册账户邮箱 *必填
+auth_key="bc638ffbc3fe16388aca041d45bc603a1a23b"   #你的CloudFlare账户key,位置在域名概述页面点击右下角获取api key。*必填
+zone_name="gavinfly.onflashdrive.app"     #你的主域名 *必填
 
 area_GEC="hk"    #自动更新的二级域名前缀,必须取hk sg kr jp us等常用国家代码
 port=443 #自定义测速端口 不能为空!!!
@@ -15,11 +15,11 @@ speedlower=10  #自定义下载速度下限,单位为mb/s
 lossmax=0.75  #自定义丢包几率上限；只输出低于/等于指定丢包率的 IP，范围 0.00~1.00，0 过滤掉任何丢包的 IP
 speedqueue_max=1 #自定义测速IP冗余量
 
-telegramBotUserId="" # telegram UserId
-telegramBotToken="6599852032:AAHhetLKhXfAIjeXgCHpish1DK_NHo3BCrk" #telegram BotToken https://t.me/ACFST_DDNS_bot
-telegramBotAPI="api.telegram.ssrc.cf" #telegram 推送API,留空将启用官方API接口:api.telegram.org
+telegramBotUserId="953800741" # telegram UserId
+telegramBotToken="6620884720:AAFYJxF8ANT0XQY2e8gGyEEb2D_ig02Mhww" #telegram BotToken https://t.me/ACFST_DDNS_bot
+telegramBotAPI="ahttps://telegram.gavinfly.onflashdrive.app" #telegram 推送API,留空将启用官方API接口:api.telegram.org
 
-githubID="cmliu" #自用IP库，也可以换成你自己的github仓库，且仓库名必须是"cloudflare-better-ip" 可自行Fork修改 https://github.com/cmliu/cloudflare-better-ip
+githubID="gavinfly2021" #自用IP库，也可以换成你自己的github仓库，且仓库名必须是"cloudflare-better-ip" 可自行Fork修改 https://github.com/cmliu/cloudflare-better-ip
 ###############################################################以下脚本内容，勿动#######################################################################
 speedurl="https://speed.cloudflare.com/__down?bytes=$((speedtestMB * 1000000))" #官方测速链接
 proxygithub="https://mirror.ghproxy.com/" #反代github加速地址，如果不需要可以将引号内容删除，如需修改请确保/结尾 例如"https://mirror.ghproxy.com/"
